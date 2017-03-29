@@ -222,3 +222,20 @@ ALTER TABLE `rol`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE IF NOT EXISTS `CC_Generos` (
+  `gen_codigo_genero` int(11) NOT NULL AUTO_INCREMENT,
+  `gen_nombre_genero` varchar(50) NOT NULL,
+  PRIMARY KEY (`gen_codigo_genero`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+CREATE TABLE IF NOT EXISTS `CC_Clientes` (
+  `cli_identificacion` varchar(13) NOT NULL,
+  `cli_nombre` varchar(200) NOT NULL,
+  `gen_codigo_genero` int(5) NOT NULL,
+  `cli_fecha_nacimiento` date NOT NULL,
+  `cli_direccion` varchar(200) NOT NULL,
+  `cli_telefono` varchar(50) NOT NULL,
+  `cli_email` varchar(100) NOT NULL,
+  UNIQUE KEY `cli_identificacion` (`cli_identificacion`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
