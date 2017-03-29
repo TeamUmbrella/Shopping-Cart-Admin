@@ -14,7 +14,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Base de datos: `sys_template`
@@ -150,7 +149,7 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`codigo_usuarios`, `nombre`, `apellido`, `clave`, `imagen`, `estado`, `codigo_rol`) VALUES
-('marquin', 'Marco', 'Teran', '761c7920f470038d4c8a619c79eddd62', '60193-3b7ab-marquinteran.jpg', 1, 1);
+('marquin', 'Marco', 'Teran', '202cb962ac59075b964b07152d234b70', '60193-3b7ab-marquinteran.jpg', 1, 1);
 
 --
 -- Índices para tablas volcadas
