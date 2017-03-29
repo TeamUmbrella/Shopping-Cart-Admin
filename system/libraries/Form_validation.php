@@ -950,18 +950,6 @@ class CI_Form_validation {
 	 */
 	public function is_unique($str, $field)
 	{
-    $db_settings = '';
-
-    $this->CI->load->library('Connection');
-    $connection = new Connection();
-
-    if (isset($_GET["base"])) {
-        $db_settings = $connection->change($_GET["base"]);
-    }
-
-    if ($db_settings != '') {
-        $this->CI->db = $this->CI->load->database($db_settings, true);
-    }
 		list($table, $field)=explode('.', $field);
 		$query = $this->CI->db->limit(1)->get_where($table, array($field => $str));
 		
