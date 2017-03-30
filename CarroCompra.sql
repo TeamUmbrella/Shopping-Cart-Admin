@@ -237,5 +237,7 @@ CREATE TABLE IF NOT EXISTS `CC_Clientes` (
   `cli_direccion` varchar(200) NOT NULL,
   `cli_telefono` varchar(50) NOT NULL,
   `cli_email` varchar(100) NOT NULL,
+  `cli_imagen` varchar(100) NOT NULL,
+  `cli_password` varchar(50) NOT NULL,
   UNIQUE KEY `cli_identificacion` (`cli_identificacion`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
