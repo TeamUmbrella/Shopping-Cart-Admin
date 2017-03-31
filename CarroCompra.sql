@@ -255,3 +255,10 @@ CREATE TABLE IF NOT EXISTS `CC_Producto` (
   `pro_alto` varchar(10) DEFAULT NULL,
   UNIQUE KEY `pro_codigo` (`pro_codigo`)
   ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE  `CarroCompras`.`CC_Categorias` (
+`cat_categoria_Id` INT( 3 ) NOT NULL ,
+`cat_descripcion` VARCHAR( 100 ) NOT NULL ,
+`cat_nombre` VARCHAR( 100 ) NOT NULL ,
+PRIMARY KEY (  `cat_categoria_Id` )
+) ENGINE = MYISAM
