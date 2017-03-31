@@ -255,3 +255,14 @@ CREATE TABLE IF NOT EXISTS `CC_Producto` (
   `pro_alto` varchar(10) DEFAULT NULL,
   UNIQUE KEY `pro_codigo` (`pro_codigo`)
   ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `CC_Pedidos` (
+  `ped_codigo` int(5) NOT NULL,
+  `ped_fecha` date NOT NULL,
+  `cli_identificacion` varchar(13) NOT NULL,
+  `pro_codigo` varchar(13) NOT NULL,
+  `ped_cantidad` int(13) NOT NULL,
+  `ped_iva` int(5) NOT NULL,
+  `ped_fecha_entrega` date NOT NULL,
+  PRIMARY KEY (`ped_codigo`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
