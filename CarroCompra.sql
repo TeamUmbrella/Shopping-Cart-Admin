@@ -239,3 +239,19 @@ CREATE TABLE IF NOT EXISTS `CC_Clientes` (
   `cli_email` varchar(100) NOT NULL,
   UNIQUE KEY `cli_identificacion` (`cli_identificacion`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS `CC_Producto` (
+  `pro_codigo` varchar(13) NOT NULL,
+  `pro_nombre` varchar(50) NOT NULL,
+  `cat_codigo` int(11) NOT NULL,
+  `pro_imagen` varchar(250) DEFAULT NULL,
+  `pro_descripcion` varchar(256) DEFAULT NULL,
+  `pro_precio` varchar(10) NOT NULL,
+  `pro_stock` varchar(10) NOT NULL,
+  `pro_material` varchar(25) DEFAULT NULL,
+  `pro_color` varchar(10) DEFAULT NULL,
+  `pro_largo` varchar(10) DEFAULT NULL,
+  `pro_ancho` varchar(10) DEFAULT NULL,
+  `pro_alto` varchar(10) DEFAULT NULL,
+  UNIQUE KEY `pro_codigo` (`pro_codigo`)
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
