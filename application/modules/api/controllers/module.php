@@ -13,7 +13,6 @@ class module extends TUTORIALIZAME_Rest_Controller
         if (!$this->get('id')) {
             $this->response(NULL, 404);
         }
-        
         $user = $this->user->get_user_by_id($this->get('id'));
         
         if ($user) {

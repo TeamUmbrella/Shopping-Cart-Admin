@@ -45,7 +45,7 @@ class Productos extends MX_Controller
       $crud->required_fields('pro_nombre', 'pro_descripcion','pro_precio','pro_stock');
       $crud->unique_fields('pro_codigo');
       $crud->set_field_upload('pro_imagen','assets/admin/uploads/main');
-      //$crud->set_relation('cat_codigo','CC_Categorias','cat_nombre');
+      $crud->set_relation('cat_categoria_id','CC_Categorias','cat_nombre');
       /*$crud->set_subject('');
       $crud->field_type('tiene_boton', 'dropdown', array('1' => 'SI', '0' => 'NO'));
       $crud->columns('titulo', 'subtitulo', 'orden', 'imagen');

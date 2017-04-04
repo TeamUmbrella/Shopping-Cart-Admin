@@ -243,7 +243,7 @@ CREATE TABLE IF NOT EXISTS `CC_Clientes` (
 CREATE TABLE IF NOT EXISTS `CC_Producto` (
   `pro_codigo` varchar(13) NOT NULL,
   `pro_nombre` varchar(50) NOT NULL,
-  `cat_codigo` int(11) NOT NULL,
+  `cat_categoria_id` int(11) NOT NULL,
   `pro_imagen` varchar(250) DEFAULT NULL,
   `pro_descripcion` varchar(256) DEFAULT NULL,
   `pro_precio` varchar(10) NOT NULL,
