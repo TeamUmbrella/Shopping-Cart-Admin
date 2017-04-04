@@ -13,7 +13,7 @@ Class Productos_model extends CI_Model
         $this->db->like('pro_codigo',$parametros);
         $this->db->or_like('pro_nombre',$parametros);
         $resultado = $this->db->get()->result_array();
-        return $resultado;
+        return @$resultado;
     }
 
     public function get_productos_por_categoria($id_categoria)
@@ -22,10 +22,7 @@ Class Productos_model extends CI_Model
         $this->db->from('CC_Producto');
         $this->db->where('cat_categoria_id',$id_categoria);
         $resultado = $this->db->get()->result_array();
-        if(sizeof($result) > 0){
-            return $result;
-        }
-        return null;
+        return @$resultado;
     }
     
 }
