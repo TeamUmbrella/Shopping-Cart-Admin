@@ -43,7 +43,6 @@ class Productos extends MX_Controller
       $crud->display_as('pro_ancho','Ancho Producto');
       $crud->display_as('pro_alto','Alto Producto');
       $crud->required_fields('pro_nombre', 'pro_descripcion','pro_precio','pro_stock');
-      $crud->unique_fields('pro_codigo');
       $crud->set_field_upload('pro_imagen','assets/admin/uploads/main');
       $crud->set_relation('cat_categoria_id','CC_Categorias','cat_nombre');
       /*$crud->set_subject('');

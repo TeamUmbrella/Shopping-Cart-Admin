@@ -2,7 +2,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Categorias extends MX_Controller
+class Pedidos extends MX_Controller
 {
     
     function __construct()
@@ -27,9 +27,17 @@ class Categorias extends MX_Controller
       $crud->unset_jquery_ui();
       
       $crud->set_theme('flexigrid');
-      $crud->set_table('CC_Categorias');
+      $crud->set_table('CC_Pedidos');
 
-      $crud->required_fields('cat_categoria_id', 'cat_descripcion', 'cat_nombre');
+      $crud->display_as('ped_codigo','Código Pedido');
+      $crud->display_as('ped_fecha','Fecha Pedido');
+      $crud->display_as('cli_identificacion',' Cliente');
+      $crud->display_as('pro_codigo','Codigo Producto');
+      $crud->display_as('ped_cantidad','Cantidad Pedido');
+      $crud->display_as('ped_iva',' Iva Pedido');
+      $crud->display_as('ped_fecha_entrega','Fecha Entrega');
+      $crud->unique_fields('ped_codigo');
+      //$crud->set_relation('cat_codigo','CC_Categorias','cat_nombre');
       /*$crud->set_subject('');
       $crud->field_type('tiene_boton', 'dropdown', array('1' => 'SI', '0' => 'NO'));
       $crud->columns('titulo', 'subtitulo', 'orden', 'imagen');
@@ -40,10 +48,10 @@ class Categorias extends MX_Controller
       
       $output = $crud->render();
       
-      $data['title_for_layout'] = "CATEGORIAS";
+      $data['title_for_layout'] = "PEDIDOS";
       $data['grocery'] = true;
       $data['grocery_crud'] = $output;
-      $this->layout->view('pages/Categorias', $data);
+      $this->layout->view('pages/Pedidos', $data);
       
     }catch(Exception $e){
       show_error($e->getMessage().' --- '.$e->getTraceAsString());

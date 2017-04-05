@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 defined('BASEPATH') OR exit('No direct script access allowed');
 class productos extends TUTORIALIZAME_Rest_Controller
 {
@@ -11,7 +13,9 @@ class productos extends TUTORIALIZAME_Rest_Controller
     public function obtener_productos_get()
     {
         if (!$this->get('parametros')) {
-            $this->response(NULL, 404);
+            $this->response(array(
+                'error' => 'User could not be found'
+            ), 404);
         }
         $productos = $this->productos_model->get_producto_por_codigo_nombre($this->get('parametros'));
 
